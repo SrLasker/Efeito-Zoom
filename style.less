@@ -1,0 +1,46 @@
+body {text-align: center;}
+a {
+  display: inline-block;
+  width: 20rem;
+  height: 20rem;
+  margin: 1rem;
+  transition: all 1s ease;
+  position: relative;
+  border-radius: 100%;
+  text-decoration: none;
+    &:nth-child(1) {background-color: rgba(197,114,0,.5);}
+    &:nth-child(2) {background-color: rgba(31,92,84,.5);}
+    &:nth-child(3) {background-color: rgba(48,69,71,.5);}
+  &::after {
+    display: block;
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat; 
+    background-position: 50%;
+    background-size: 100% auto; 
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c7/Cog-scripted-svg-white.svg); 
+    transition: all 1s ease;
+  }
+  span {
+    display: block;
+    color: #fff;
+    opacity: 0;
+    padding: 2rem 3rem;
+    transition: all 1s ease;
+  }
+
+  &:hover {
+    &:nth-child(1) {background-color: rgba(197,114,0,1);}
+    &:nth-child(2) {background-color: rgba(31,92,84,1);}
+    &:nth-child(3) {background-color: rgba(48,69,71,1);}
+    &::after {
+      opacity: 0;
+      background-size: 130% auto;
+    }
+    span {opacity: 1;}
+  }
+}
